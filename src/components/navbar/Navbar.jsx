@@ -15,25 +15,21 @@ function Navbar() {
         setActive(active => !active)
     }
 
-    // const getClassName = () => {
-    //     if()
-    // }
-
-    console.log(location);
-
     return (
         <div className={active ? "navbar navbar-bg" : "navbar"}>
             <div className="logo">
-                <h2><Link to="/" className={active ? "title dark" : "title"}>Coco & Sun Travel and Tours</Link></h2>
+                <h2><Link to="/" className={location.pathname !== "/" || active ? "dark" : location.pathname !== "/" ? "dark" : ""}>Coco & Sun Travel and Tours</Link></h2>
             </div>
             <ul className="nav-menu">
-                <li><Link to="/">Home</Link></li>
-                <li><Link to="/about">About</Link></li>
-                <li><Link to="/travel">Travel</Link></li>
-                <li><Link to="/contact">Contact</Link></li>
+                <li><Link to="/" className={location.pathname !== "/" ? "dark" : ""}>Home</Link></li>
+                <li><Link to="/about" className={location.pathname !== "/" ? "dark" : ""}>About</Link></li>
+                <li><Link to="/travel" className={location.pathname !== "/" ? "dark" : ""}>Travel</Link></li>
+                <li><Link to="/contact" className={location.pathname !== "/" ? "dark" : ""}>Contact</Link></li>
             </ul>
             <div className={active ? "hamburger dark" : "hamburger"} onClick={handleChange}>
-                {active ? <IoMdClose className='icon' /> : <RxHamburgerMenu className="icon" />}
+                {active ? <IoMdClose className='icon' /> :
+                    location.pathname !== "/" ?
+                        <RxHamburgerMenu className="icon dark" /> : <RxHamburgerMenu className="icon" />}
             </div>
             <div className={active ? `mobile-menu active` : `mobile-menu`}>
                 <ul className='mobile-nav'>
@@ -44,8 +40,8 @@ function Navbar() {
                 </ul>
                 <div className="mobile-menu-bottom">
                     <div className="social-icons">
-                        <FaFacebook className='icon' />
-                        <IoMdMail className='icon' />
+                        <FaFacebook className='icon social-icon-hover' />
+                        <IoMdMail className='icon social-icon-hover' />
                     </div>
                 </div>
             </div>

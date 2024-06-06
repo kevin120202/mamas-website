@@ -1,11 +1,12 @@
 import React from "react"
 import "./index.css"
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import Navbar from "./components/navbar/Navbar"
 import Home from "./components/pages/home/Home"
 import About from "./components/pages/about/About"
 import Travel from "./components/pages/travel/Travel"
 import Contact from "./components/pages/contact/Contact"
+import Footer from "./components/footer/Footer";
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
                 <Route path="/travel" element={<Travel />} />
                 <Route path="/contact" element={<Contact />} />
             </Routes>
+            <Footer />
         </div>
     )
 }

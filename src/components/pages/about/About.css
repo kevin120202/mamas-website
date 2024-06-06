@@ -1,0 +1,26 @@
+.about {
+    padding-top: 100px;
+    width: 100%;
+    margin-bottom: 90px;
+}
+
+.about .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 90px;
+}
+
+.profile-img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+
+@media screen and (max-width: 1200px) {
+    .about .container {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+    }
+}

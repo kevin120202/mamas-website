@@ -1,0 +1,49 @@
+.destinations {
+    width: 100%;
+    padding: 4em 0;
+}
+
+.img-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+}
+
+.destinations img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.destinations p {
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.description {
+    text-align: center;
+    max-width: 500px;
+    margin: auto;
+    padding: 4em 0;
+}
+
+.about-btn {
+    background-color: black;
+    padding: 20px 40px;
+    margin-top: 40px;
+    cursor: pointer;
+    color: white;
+    font-weight: 700;
+    font-size: 14px;
+    border: none;
+}
+
+.destinations-subtext {
+    margin-top: 20px;
+}
+
+@media screen and (max-width: 940px) {
+    .img-grid {
+        grid-template-columns: 1fr;
+    }
+}

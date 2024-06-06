@@ -36,6 +36,15 @@
     cursor: pointer;
 }
 
+.social-icon-hover:hover {
+    transform: scale(1.5);
+    transition: .3s;
+}
+
+.dark {
+    color: black;
+}
+
 @media screen and (max-width: 940px) {
     .navbar {
         gap: 1.5em;
@@ -52,10 +61,6 @@
         align-items: center;
         background-color: #f5f5f5;
         transition: .3s;
-    }
-
-    .dark {
-        color: black;
     }
 
     .active {

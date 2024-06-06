@@ -1,0 +1,28 @@
+.footer img {
+    width: 100px;
+    border-radius: 50%;
+}
+
+.footer .container {
+    text-align: center;
+    padding: 1em 0;
+}
+
+.footer p {
+    margin: 1em 0;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5em;
+}
+
+.facebook-btn,
+.email-btn {
+    background: transparent;
+    border: none;
+    font-size: 25px;
+    cursor: pointer;
+}
