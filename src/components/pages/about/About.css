@@ -1,24 +1,82 @@
 .about {
-    padding-top: 100px;
+    padding-top: 200px;
     width: 100%;
     margin-bottom: 90px;
 }
 
-.about .container {
+.about h3 {
+    font-weight: bold;
+    font-size: 35px;
+    font-style: italic;
+}
+
+.about p {
+    line-height: 1.7em;
+    letter-spacing: .01em;
+    color: rgba(23, 23, 23, .9);
+}
+
+.description-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 90px;
+    gap: 50px;
 }
 
 .profile-img {
     width: 100%;
-    height: 500px;
-    object-fit: cover;
+    height: 800px;
+    object-fit: contain;
 }
 
-@media screen and (max-width: 1200px) {
-    .about .container {
+.about-description {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.about-content {
+    margin-top: 90px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about-content h4 {
+    font-size: 30px;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.about-content h3 {
+    font-size: 50px;
+    letter-spacing: 0em;
+    line-height: 1.2em;
+    text-transform: uppercase;
+    font-weight: 400;
+    max-width: 690px;
+    text-align: center;
+    margin: 1em 0;
+}
+
+.about-content div {
+    display: flex;
+    gap: 2.5em;
+}
+
+.contact-btn {
+    background-color: #ddc9bb;
+    color: #464343;
+    padding: 20px 40px;
+    margin-top: 80px;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 14px;
+    border: none;
+}
+
+@media screen and (max-width: 940px) {
+    .description-container {
         display: flex;
         flex-direction: column;
         gap: 50px;

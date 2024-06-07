@@ -1,14 +1,19 @@
 import React from 'react'
-import { Routes, Route } from 'react-router-dom';
 import Hero from '../../hero/Hero'
 import Destinations from '../../destinations/Destinations'
+import { motion } from "framer-motion"
+
 
 function Home() {
     return (
-        <div>
+        <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+        >
             <Hero />
             <Destinations />
-        </div>
+        </motion.div>
     )
 }
 
