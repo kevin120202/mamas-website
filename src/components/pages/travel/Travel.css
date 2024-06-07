@@ -1,0 +1,46 @@
+.travel {
+    padding-top: 150px;
+    width: 100%;
+    margin-bottom: 90px;
+}
+
+.travel .container {
+    text-align: center;
+}
+
+.recent-travel-imgs {
+    display: grid;
+    grid-template-rows: auto auto auto;
+    grid-template-columns: auto auto auto;
+    gap: 1em;
+    margin: 80px 0;
+}
+
+.recent-travel-imgs img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.recent-travel-imgs p {
+    color: white;
+    background-color: rgba(0, 0, 0, .4);
+    font-weight: bold;
+    padding: 5%;
+    text-align: center;
+}
+
+.travel-locations {
+    position: relative;
+}
+
+.caption {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import "./Navbar.css"
 import { Link, useLocation } from "react-router-dom"
 import { RxHamburgerMenu } from "react-icons/rx";
@@ -10,6 +10,10 @@ import { IoMdClose } from "react-icons/io";
 function Navbar() {
     const [active, setActive] = useState(false)
     const location = useLocation()
+
+    // useEffect(() => {
+    //     setActive(false)
+    // }, [location])
 
     const handleChange = () => {
         setActive(active => !active)
