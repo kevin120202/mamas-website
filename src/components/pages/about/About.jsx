@@ -1,11 +1,16 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import "./About.css"
 import yeye_img from "../../../assets/yeye-pic.jpeg"
 import { motion } from "framer-motion"
 import { Link } from "react-router-dom"
-
+import AOS from "aos"
+import "aos/dist/aos.css"
 
 function About() {
+    useEffect(() => {
+        AOS.init({ duration: 1500 })
+    }, [])
+
     return (
         <motion.div className='about'
             initial={{ opacity: 0 }}
@@ -13,10 +18,10 @@ function About() {
             exit={{ opacity: 0 }}
         >
             <div className="container">
-                <h1 className='about-title'>About</h1>
+                <h1 className='about-title' data-aos="fade-right">About</h1>
                 <div className='description-container'>
-                    <img src={yeye_img} alt="" className='profile-img' />
-                    <div className="about-description">
+                    <img src={yeye_img} alt="" className='profile-img' data-aos="fade-up" />
+                    <div className="about-description" data-aos="fade-right">
                         <h3>MEET YEYE</h3>
                         <p>I started this travel agency to support my full service destination wedding company, Lindeman Weddings and Events, because destination weddings are so much more than just planning a wedding.</p>
                         <p>I grew up on the beaches of California and coasts of Scotland. I have lived almost half my life in Europe, but do still call Seattle, WA, USA home for the winter months. This is where our offices are headquartered. In the summers you can find me bouncing between the Amalfi Coast and the Greek Islands. I love to travel and explore new places in an active and meaningful way. I work with many colleagues around the world to offer our guests the best local experiences. Bringing good tourism to these amazing communities is my passion.</p>
@@ -26,7 +31,7 @@ function About() {
                             -Erin Lindeman</p>
                     </div>
                 </div>
-                <div className="about-content">
+                <div className="about-content" data-aos="fade-left">
                     <h4>Why are we so passionate</h4>
                     <h3>YOU IMAGINE YOUR DREAM VACATION, AND WE MAKE THAT DREAM A REALITY. </h3>
                     <div>

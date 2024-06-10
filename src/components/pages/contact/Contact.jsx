@@ -1,6 +1,8 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { motion } from "framer-motion"
 import "./Contact.css"
+import AOS from "aos"
+import "aos/dist/aos.css"
 
 function Contact() {
     const [result, setResult] = React.useState("");
@@ -28,6 +30,10 @@ function Contact() {
         }
     };
 
+    useEffect(() => {
+        AOS.init({ duration: 1500 })
+    }, [])
+
     return (
         <motion.div
             initial={{ opacity: 0 }}
@@ -36,8 +42,8 @@ function Contact() {
             className='contact'
         >
             <h1>Contact</h1>
-            <div className="container">
-                <div className="contact-col">
+            <div className="container" data-aos="fade-right">
+                <div className="contact-col" >
                     <h3>Send us a message</h3>
                     <p>Feel free to reach out through contact form or find our contact information below. Your questions are important to us as we strive to provide exceptional service to our clients.
                     </p>
@@ -46,7 +52,7 @@ function Contact() {
                         <li>123456789</li>
                     </ul>
                 </div>
-                <div className="contact-col">
+                <div className="contact-col" >
                     <form onSubmit={onSubmit}>
                         <label htmlFor="fullname">Your Fullname</label>
                         <input type="text" name='name' placeholder='Enter your fullname' id='fullname' required />

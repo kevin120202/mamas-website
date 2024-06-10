@@ -5,23 +5,27 @@ import { RxHamburgerMenu } from "react-icons/rx";
 import { FaFacebook } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
 import { IoMdClose } from "react-icons/io";
-import logo from "../../assets/coco-suns-logo.jpeg"
-
+import AOS from "aos"
+import "aos/dist/aos.css"
 
 function Navbar() {
     const [active, setActive] = useState(false)
     const location = useLocation()
 
-    // useEffect(() => {
-    //     setActive(false)
-    // }, [location])
+    useEffect(() => {
+        setActive(false)
+    }, [location])
+
+    useEffect(() => {
+        AOS.init({ duration: 2000 })
+    }, [])
 
     const handleChange = () => {
         setActive(active => !active)
     }
 
     return (
-        <div className={active ? "navbar navbar-bg" : "navbar"}>
+        <div className={active ? "navbar navbar-bg" : "navbar"} data-aos="fade-down">
             <div className="logo">
                 <h2><Link to="/" className={location.pathname !== "/" || active ? "dark" : location.pathname !== "/" ? "dark" : ""}>Coco & Sun Travel and Tours</Link></h2>
             </div>
