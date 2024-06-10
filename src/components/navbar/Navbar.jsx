@@ -5,6 +5,7 @@ import { RxHamburgerMenu } from "react-icons/rx";
 import { FaFacebook } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
 import { IoMdClose } from "react-icons/io";
+import logo from "../../assets/coco-suns-logo.jpeg"
 
 
 function Navbar() {

@@ -13,6 +13,7 @@ function About() {
             exit={{ opacity: 0 }}
         >
             <div className="container">
+                <h1 className='about-title'>About</h1>
                 <div className='description-container'>
                     <img src={yeye_img} alt="" className='profile-img' />
                     <div className="about-description">
