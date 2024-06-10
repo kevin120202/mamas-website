@@ -44,3 +44,15 @@
     justify-content: center;
     align-items: center;
 }
+
+@media screen and (max-width: 940px) {
+    .recent-travel-imgs {
+        grid-template-columns: auto auto;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .recent-travel-imgs {
+        grid-template-columns: auto;
+    }
+}

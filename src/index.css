@@ -47,7 +47,7 @@ a:hover {
 }
 
 @media screen and (max-width: 940px) {
-    h1 {
+    /* h1 {
         font-size: 2rem;
     }
 
@@ -57,5 +57,5 @@ a:hover {
 
     h3 {
         font-size: 1;
-    }
+    } */
 }
