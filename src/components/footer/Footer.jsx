@@ -13,7 +13,7 @@ function Footer() {
     }, [])
 
     return (
-        <div className='footer' data-aos="fade-up">
+        <div className='footer' data-aos="fade-right">
             <div className="container">
                 <img src={logo} alt="Logo image." />
                 <p>© Coco & Sun Travel and Tours</p>
